@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AppcharaApplication<Appchara>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.Appchara.Appchara.AppcharaApplication",
+            "projectName": "Appchara",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
