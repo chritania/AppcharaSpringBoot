@@ -5,14 +5,14 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.Appchara.Appchara.NotFoundException.UserNotFoundException;
+import com.Appchara.Appchara.NotFoundException.UserDetailsNotFoundException;
 
 @RestControllerAdvice
-public class UserExceptionHandler {
+public class UserDetailsExceptionHandler {
 
-    @ExceptionHandler(UserNotFoundException.class)
+    @ExceptionHandler(UserDetailsNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    String UserNotFoundException(UserNotFoundException e){
+    String UserNotFoundException(UserDetailsNotFoundException e){
         return e.getMessage();
     }
 

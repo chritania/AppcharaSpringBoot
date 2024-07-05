@@ -9,30 +9,30 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.Appchara.Appchara.Model.User;
-import com.Appchara.Appchara.NotFoundException.OrderNotFoundException;
-import com.Appchara.Appchara.Repository.UserRepository;
+import com.Appchara.Appchara.Model.UserDerails;
+import com.Appchara.Appchara.NotFoundException.OrderDetailsNotFoundException;
+import com.Appchara.Appchara.Repository.UserDetailsRepository;
 
 @RestController
-public class UserController {
+public class UserDetailsController {
 
-    UserRepository repo;
+    UserDetailsRepository repo;
 
-    public UserController(UserRepository repo) {
+    public UserDetailsController(UserDetailsRepository repo) {
         this.repo = repo;
     }
 
     @GetMapping("/User")
-    public List<User> getOrders(){
+    public List<UserDerails> getOrders(){
         return repo.findAll();
     }
     @GetMapping("/User/{id}")
-    public User getOrder(@PathVariable Long id){
+    public UserDerails getOrder(@PathVariable Long id){
         return repo.findById(id)
-        .orElseThrow(()-> new OrderNotFoundException(id));
+        .orElseThrow(()-> new OrderDetailsNotFoundException(id));
     }
     @PostMapping("/User/new")
-    public String addUser(@RequestBody User newUser){
+    public String addUser(@RequestBody UserDerails newUser){
         repo.save(newUser);
         return "A new user added. Yey!!!";
     }
