@@ -48,8 +48,8 @@ public class ProductController {
             return repo.save(newProduct);
         });
     }
-    @DeleteMapping("/User/delete/{id}")
-    public String deleteUser(@PathVariable Long Id){
+    @DeleteMapping("/Product/delete/{id}")
+    public String deleteProduct(@PathVariable Long Id){
         repo.deleteById(Id);
         return "A user is deleted";
     }
