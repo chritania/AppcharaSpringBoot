@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.Appchara.Appchara.Model.OrderDetails;
 import com.Appchara.Appchara.Model.Product;
 import com.Appchara.Appchara.NotFoundException.ProductNotFoundException;
 import com.Appchara.Appchara.Repository.ProductRepository;
