@@ -6,7 +6,7 @@ import jakarta.persistence.Id;
 
 
 @Entity
-public class UserDerails {
+public class UserDetails {
 
     private @Id
     @GeneratedValue Long Id;
@@ -14,9 +14,9 @@ public class UserDerails {
     private int age;
     private String email;
 
-    UserDerails(){}
+    UserDetails(){}
 
-    public UserDerails(String name, int age, String email) {
+    public UserDetails(String name, int age, String email) {
         this.name = name;
         this.age = age;
         this.email = email;

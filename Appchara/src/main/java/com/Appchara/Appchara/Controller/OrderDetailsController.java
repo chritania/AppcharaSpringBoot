@@ -23,21 +23,21 @@ public class OrderDetailsController {
         this.repo = repo;
     }
 
-    @GetMapping("/Order")
+    @GetMapping("/OrderDetails")
     public List<OrderDetails> getOrders(){
         return repo.findAll();
     }
-    @GetMapping("/Order/{id}")
+    @GetMapping("/OrderDetails/{id}")
     public OrderDetails getOrder(@PathVariable Long id){
         return repo.findById(id)
         .orElseThrow(()-> new OrderDetailsNotFoundException(id));
     }
-    @PostMapping("/Order/new")
+    @PostMapping("/OrderDetails/new")
     public String addOrder(@RequestBody OrderDetails newOrder){
         repo.save(newOrder);
         return "A new order added. Yey!!!";
     }
-    @PutMapping("Order/edit/{id}")
+    @PutMapping("OrderDetails/edit/{id}")
     public OrderDetails updateOrder(@PathVariable Long id, @RequestBody OrderDetails newOrder){
         return repo.findById(id)
         .map(order ->{
@@ -54,7 +54,7 @@ public class OrderDetailsController {
             return repo.save(newOrder);
         });
     }
-    @DeleteMapping("/Order/delete/{id}")
+    @DeleteMapping("/OrderDetails/delete/{id}")
     public String deleteOrder(@PathVariable Long Id){
         repo.deleteById(Id);
         return "A order is deleted";

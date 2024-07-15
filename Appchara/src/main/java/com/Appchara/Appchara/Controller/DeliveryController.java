@@ -42,14 +42,9 @@ public class DeliveryController {
     public Delivery updateDelivery(@PathVariable Long id, @RequestBody Delivery newDelivery){
         return repo.findById(id)
         .map(delivery ->{
-            delivery.setUserId(newDelivery.getUserId());
-            delivery.setReservedid(newDelivery.getReservedid());
-            delivery.setDeliveryid(newDelivery.getDeliveryid());
-            delivery.setOrderdate(newDelivery.getOrderdate());
-            delivery.setTotalamount(newDelivery.getTotalamount());
-            delivery.setReservesStatus(newDelivery.getReservesStatus());
-            delivery.setStatus(newDelivery.getStatus());
-            delivery.setDeliveryStatus(newDelivery.getDeliveryStatus());
+            delivery.setProductId(newDelivery.getProductId());
+            delivery.setdeliveryid(newDelivery.getDeliveryid());
+            delivery.setOrderId(newDelivery.getOrderId());
             return repo.save(delivery);
         }).orElseGet(()->{
             return repo.save(newDelivery);
