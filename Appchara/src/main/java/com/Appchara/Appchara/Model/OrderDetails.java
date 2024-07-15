@@ -16,7 +16,7 @@ public class OrderDetails {
     private Long reservedid;
     private Long deliveryid;
     private Date orderdate;
-    private double Totalamount;
+    private double totalAmount;
     private String reservesStatus;
     private String Status;
     private String deliveryStatus;
@@ -25,22 +25,16 @@ public class OrderDetails {
 
     
 
-    public OrderDetails(Long userId, Long reservedid, Long deliveryid, Date orderdate, double totalamount,
+    public OrderDetails(Long userId, Long reservedid, Long deliveryid, Date orderdate, double totalAmount,
             String reservesStatus, String status, String deliveryStatus) {
         UserId = userId;
         this.reservedid = reservedid;
         this.deliveryid = deliveryid;
         this.orderdate = orderdate;
-        Totalamount = totalamount;
+        totalAmount = totalAmount;
         this.reservesStatus = reservesStatus;
         Status = status;
         this.deliveryStatus = deliveryStatus;
-    }
-
-
-
-    public void setOrderId(Long orderId) {
-        OrderId = orderId;
     }
     public void setUserId(Long userId) {
         UserId = userId;
@@ -54,8 +48,8 @@ public class OrderDetails {
     public void setOrderdate(Date orderdate) {
         this.orderdate = orderdate;
     }
-    public void setTotalamount(double totalamount) {
-        Totalamount = totalamount;
+    public void setTotalamount(double totalAmount) {
+        totalAmount = totalAmount;
     }
     public void setReservesStatus(String reservesStatus) {
         this.reservesStatus = reservesStatus;
@@ -81,8 +75,8 @@ public class OrderDetails {
     public Date getOrderdate() {
         return orderdate;
     }
-    public double getTotalamount() {
-        return Totalamount;
+    public double getTotalAmount() {
+        return totalAmount;
     }
     public String getReservesStatus() {
         return reservesStatus;
