@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Appchara.Appchara.Model.Order;
-import com.Appchara.Appchara.Model.OrderDetails;
 import com.Appchara.Appchara.NotFoundException.OrderNotFoundException;
-import com.Appchara.Appchara.Repository.OrderDetailsRepository;
 import com.Appchara.Appchara.Repository.OrderRepository;
 
 @RestController
