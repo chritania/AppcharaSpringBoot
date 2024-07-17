@@ -31,7 +31,7 @@ public class OrderDetails {
         this.reservedid = reservedid;
         this.deliveryid = deliveryid;
         this.orderdate = orderdate;
-        totalAmount = totalAmount;
+        this.totalAmount = totalAmount;
         this.reservesStatus = reservesStatus;
         Status = status;
         this.deliveryStatus = deliveryStatus;
@@ -49,7 +49,7 @@ public class OrderDetails {
         this.orderdate = orderdate;
     }
     public void setTotalamount(double totalAmount) {
-        totalAmount = totalAmount;
+        this.totalAmount = totalAmount;
     }
     public void setReservesStatus(String reservesStatus) {
         this.reservesStatus = reservesStatus;

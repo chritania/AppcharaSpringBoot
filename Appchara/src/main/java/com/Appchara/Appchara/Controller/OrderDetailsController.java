@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Appchara.Appchara.Model.OrderDetails;
@@ -15,6 +16,7 @@ import com.Appchara.Appchara.NotFoundException.OrderDetailsNotFoundException;
 import com.Appchara.Appchara.Repository.OrderDetailsRepository;
 
 @RestController
+@RequestMapping("/api/v1/orderdetails")
 public class OrderDetailsController {
 
     OrderDetailsRepository repo;
@@ -23,21 +25,21 @@ public class OrderDetailsController {
         this.repo = repo;
     }
 
-    @GetMapping("/OrderDetails")
+    @GetMapping("/All")
     public List<OrderDetails> getOrders(){
         return repo.findAll();
     }
-    @GetMapping("/OrderDetails/{id}")
+    @GetMapping("/{id}")
     public OrderDetails getOrder(@PathVariable Long id){
         return repo.findById(id)
         .orElseThrow(()-> new OrderDetailsNotFoundException(id));
     }
-    @PostMapping("/OrderDetails/new")
+    @PostMapping("/new")
     public String addOrder(@RequestBody OrderDetails newOrder){
         repo.save(newOrder);
         return "A new order added. Yey!!!";
     }
-    @PutMapping("OrderDetails/edit/{id}")
+    @PutMapping("/edit/{id}")
     public OrderDetails updateOrder(@PathVariable Long id, @RequestBody OrderDetails newOrder){
         return repo.findById(id)
         .map(order ->{
@@ -54,7 +56,7 @@ public class OrderDetailsController {
             return repo.save(newOrder);
         });
     }
-    @DeleteMapping("/OrderDetails/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public String deleteOrder(@PathVariable Long Id){
         repo.deleteById(Id);
         return "A order is deleted";
