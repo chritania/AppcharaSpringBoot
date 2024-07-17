@@ -23,11 +23,9 @@ public class Delivery {
     public Long getOrderId() {
         return OrderId;
     }
-
     public Long getDeliveryid() {
         return deliveryid;
     }
-
     public Long getProductId() {
         return productId;
     }
@@ -36,11 +34,9 @@ public class Delivery {
     public void setOrderId(Long orderId) {
         OrderId = orderId;
     }
-
     public void setProductId(Long productId) {
         this.productId = productId;
     }
-
     public void setdeliveryid(Long deliveryid2) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'setdeliveryid'");

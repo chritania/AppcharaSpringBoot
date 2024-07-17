@@ -32,11 +32,10 @@ public class Order {
     public void setTotalAmount(double totalAmount) {
         this.totalAmount = totalAmount;
     }
-
+    
     public void setStatus(String status) {
         Status = status;
     }
-
 
     //getters
     public Long getOrderId() {
@@ -54,6 +53,4 @@ public class Order {
     public String getStatus() {
         return Status;
     }
-
-
 }
