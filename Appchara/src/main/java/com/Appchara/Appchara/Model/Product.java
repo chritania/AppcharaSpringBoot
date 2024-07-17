@@ -13,7 +13,7 @@ public class Product {
     private String description;
     private double price;
     private String url;
-
+    
     Product(){}
 
     public Product(String productname, String description, double price) {
