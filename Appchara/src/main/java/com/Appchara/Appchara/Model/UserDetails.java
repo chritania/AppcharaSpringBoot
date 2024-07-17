@@ -33,7 +33,6 @@ public class UserDetails {
     public Long getId() {
         return Id;
     }
-
     public String getName() {
         return name;
     }
