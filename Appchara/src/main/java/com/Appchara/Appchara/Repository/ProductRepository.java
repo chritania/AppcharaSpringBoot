@@ -6,5 +6,5 @@ import com.Appchara.Appchara.Model.Product;
 
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
-    Product findByProductname(String productname);
+    Product findByProductId(Long id);
 }

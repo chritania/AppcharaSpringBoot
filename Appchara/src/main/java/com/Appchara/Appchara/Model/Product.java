@@ -9,20 +9,20 @@ public class Product {
 
     private @Id
     @GeneratedValue Long id;
-    private String productname;
+    private String productId;
     private String description;
     private double price;
   
     Product(){}
 
-    public Product(String productname, String description, double price) {
-        this.productname = productname;
+    public Product(String productId, String description, double price) {
+        this.productId = productId;
         this.description = description;
         this.price = price;
     }
 
-    public void setProductname(String productname) {
-        this.productname = productname;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
     public void setDescription(String description) {
@@ -37,8 +37,8 @@ public class Product {
         return id;
     }
 
-    public String getProductname() {
-        return productname;
+    public String getProductId() {
+        return productId;
     }
 
     public String getDescription() {

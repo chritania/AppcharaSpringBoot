@@ -1,24 +1,24 @@
 package com.Appchara.Appchara.DTO;
 
 public class BagDTO {
-    private String productName;
+    private Long productId;
     private Long userId;
     private int numberOfOrders;
 
     BagDTO(){}
 
-    public BagDTO(String productName, Long userId, int numberOfOrders) {
-        this.productName = productName;
+    public BagDTO(Long productId, Long userId, int numberOfOrders) {
+        this.productId = productId;
         this.userId = userId;
         this.numberOfOrders = numberOfOrders;
     }
 
-    public String getProductName() {
-        return productName;
+    public Long getProductId() {
+        return productId;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
     public Long getUserId() {
