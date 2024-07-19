@@ -41,15 +41,12 @@ public class Order {
     public Long getOrderId() {
         return OrderId;
     }
-
     public Long getUserId() {
         return UserId;
     }
-
     public double getTotalAmount() {
         return totalAmount;
     }
-
     public String getStatus() {
         return Status;
     }

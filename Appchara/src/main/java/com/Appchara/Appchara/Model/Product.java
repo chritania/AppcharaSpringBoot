@@ -25,9 +25,11 @@ public class Product {
     public void setProductname(String productname) {
         this.productname = productname;
     }
-
     public void setDescription(String description) {
         this.description = description;
+    }
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public void setPrice(double price) {
@@ -37,18 +39,16 @@ public class Product {
     public Long getId() {
         return id;
     }
-
     public String getProductname() {
         return productname;
     }
-
     public String getDescription() {
         return description;
     }
-
     public double getPrice() {
         return price;
     }
-
-
+    public String getUrl() {
+        return url;
+    } 
 }
