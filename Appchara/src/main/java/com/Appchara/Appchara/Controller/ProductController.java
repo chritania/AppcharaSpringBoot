@@ -51,8 +51,8 @@ public class ProductController {
         });
     }
     @DeleteMapping("/delete/{id}")
-    public String deleteProduct(@PathVariable Long Id){
-        repo.deleteById(Id);
+    public String deleteProduct(@PathVariable Long id){
+        repo.deleteById(id);
         return "A user is deleted";
     }
 }
