@@ -87,5 +87,4 @@ public class OrderDetails {
     public String getDeliveryStatus() {
         return deliveryStatus;
     }
-    
 }

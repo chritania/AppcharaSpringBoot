@@ -24,8 +24,9 @@ public class Product {
     }
 
 
-    public Long getProductId() {
-        return productId;
+    }
+    public void setUrl(String url) {
+        this.url = url;
     }
 
 
@@ -38,28 +39,5 @@ public class Product {
         return name;
     }
 
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
-    public String getDescription() {
-        return description;
-    }
-
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-
-    public double getPrice() {
-        return price;
-    }
-
-
-    public void setPrice(double price) {
-        this.price = price;
     } 
 }
