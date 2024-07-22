@@ -36,13 +36,13 @@ public class ProductController {
     @PostMapping("/new")
     public String addUser(@RequestBody Product newProduct){
         repo.save(newProduct);
-        return "A new user added. Yey!!!";
+        return "A new product added. Yey!!!";
     }
     @PutMapping("/edit/{id}")
     public Product updateProduct(@PathVariable Long id, @RequestBody Product newProduct){
         return repo.findById(id)
         .map(product ->{
-            product.setProductname(newProduct.getProductname());
+            product.setName(newProduct.getName());
                 product.setDescription(newProduct.getDescription());
                 product.setPrice(newProduct.getPrice());
                 return product;

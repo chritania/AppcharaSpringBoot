@@ -8,47 +8,36 @@ import jakarta.persistence.Id;
 public class Product {
 
     private @Id
-    @GeneratedValue Long id;
-    private String productname;
+    @GeneratedValue Long productId; //Primary Key
+    private String name;
     private String description;
     private double price;
-    private String url;
-    
+
+
     Product(){}
 
-    public Product(String productname, String description, double price) {
-        this.productname = productname;
+
+    public Product(String name, String description, double price) {
+        this.name = name;
         this.description = description;
         this.price = price;
     }
 
-    public void setProductname(String productname) {
-        this.productname = productname;
-    }
-    public void setDescription(String description) {
-        this.description = description;
+
     }
     public void setUrl(String url) {
         this.url = url;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+
+    public void setProductId(Long productId) {
+        this.productId = productId;
     }
 
-    public Long getId() {
-        return id;
+
+    public String getName() {
+        return name;
     }
-    public String getProductname() {
-        return productname;
-    }
-    public String getDescription() {
-        return description;
-    }
-    public double getPrice() {
-        return price;
-    }
-    public String getUrl() {
-        return url;
+
     } 
 }
