@@ -8,7 +8,7 @@ import com.Appchara.Appchara.Model.UserAuth;
 
 
 public interface UserAuthRepository extends JpaRepository<UserAuth, Long> {
-    Optional<UserAuth> findByEmail(String email);
+    UserAuth findByEmail(String email);
     Optional<UserAuth> findByUsername(String username);
     Optional<UserAuth> findByUsernameOrEmail(String email, String username);
 
