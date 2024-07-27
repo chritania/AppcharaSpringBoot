@@ -10,44 +10,36 @@ public class Order {
 
     private @Id
     @GeneratedValue Long OrderId;
-    private Long UserId;
+    private Long userId;
     private double totalAmount;
-    private String Status;
 
     Order(){}
 
 
     public Order(Long userId,  double totalAmount, String status) {
-        this.UserId = userId;
+        this.userId = userId;
         this.totalAmount = totalAmount;
-        this.Status = status;
 
     }
 
     //setters
     public void setUserId(Long userId) {
-        this.UserId = userId;
+        this.userId = userId;
     }
 
     public void setTotalAmount(double totalAmount) {
         this.totalAmount = totalAmount;
     }
     
-    public void setStatus(String status) {
-        Status = status;
-    }
 
     //getters
     public Long getOrderId() {
         return OrderId;
     }
     public Long getUserId() {
-        return UserId;
+        return userId;
     }
     public double getTotalAmount() {
         return totalAmount;
-    }
-    public String getStatus() {
-        return Status;
     }
 }
